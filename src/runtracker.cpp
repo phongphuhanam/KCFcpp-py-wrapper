@@ -13,6 +13,10 @@
 using namespace std;
 using namespace cv;
 
+#if CV_MAJOR_VERSION > 2
+#define CV_LOAD_IMAGE_COLOR IMREAD_COLOR
+#endif
+
 int main(int argc, char* argv[]){
 
 	if (argc > 5) return -1;
